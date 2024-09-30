@@ -83,7 +83,7 @@ linearHypothesis(aux, c("inc=0", "pwtopen=0", "polity=0", "lareapc=0",
 coeftest(model1, vcov. = vcovHC(model1))
 
 # 4)b) FGLS
-lresOLS2 <- log(resOLS2) #  log of the square of the OLS residuals
+trade$lresOLS2 <- log(trade$resOLS2) #  log of the square of the OLS residuals
 # Regress it on an intercept and the explanatory variables:
 laux <- lm(lresOLS2 ~ inc + pwtopen + polity + lareapc, data = trade)
 summary(laux)
